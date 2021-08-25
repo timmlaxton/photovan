@@ -25,6 +25,10 @@ p {
   font-family: sans-serif;
 }
 
+ul {
+  font-size: var(--big);
+}
+
 h1 {
   font-size: var(--header1);
 }
@@ -70,12 +74,14 @@ ul {
 /* nav */
 
 nav {
+  min-height: 10vh;
   width: 90%;
   margin: auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
-  padding: 2rem 0rem;
+  padding: 20px 0px 12px;
+  background: #fff;
 }
 
 .nav-links {
@@ -117,11 +123,58 @@ nav {
 
 .hero-images {
   flex: 1 1 40rem;
-  background: linear-gradient(#dad8dd, #dad1d4);
 }
 
 .hero-pose {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.nav-open {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50vh;
+  background: #fff;
+  z-index: 1;
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  flex: 1 1 20rem;
+
+  transform: translateY(-100%);
+}
+
+.contact {
+  grid-column: 2/3;
+}
+
+.nav-open h3 {
+  font-size: 28px;
+  padding-bottom: 40px;
+}
+
+.nav-open p {
+  font-size: 18px;
+}
+
+.social-links img {
+  padding: 0px 20px;
+}
+
+.Logo,
+.menu {
+  z-index: 2;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.portfolio {
+  color: #fff;
+
+  background: #fff;
 }
