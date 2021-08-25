@@ -133,7 +133,7 @@ nav {
 
 .nav-open {
   position: absolute;
-  top: 100px;
+  top: 10px;
   left: 0px;
   width: 100%;
   height: 20vh;
