@@ -486,3 +486,28 @@ nav {
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+.work-description p {
+  font-size: 20px;
+  padding: 10px 0px;
+}
+
+.my-work {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+
+  padding: 40px 0px;
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 200px 200px 200px;
+  align-items: center;
+  margin-top: 4%;
+}
+
+.work-gallery img {
+  width: 100%;
+}
