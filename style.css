@@ -396,13 +396,25 @@ nav {
   .gallery-head {
     opacity: 0.8;
   }
+
+  .my-work {
+    flex-direction: column;
+  }
+  .story-description,
+  .work-description {
+    width: 100%;
+  }
+  .work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 /* Carousel */
 
 .carousel-wrapper {
   overflow: hidden;
-  width: 90%;
+  width: 60%;
   margin: auto;
 }
 
