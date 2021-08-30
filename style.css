@@ -4,7 +4,8 @@
   box-sizing: 0;
 }
 
-body {
+body,
+button {
   font-family: "Permanent Marker", cursive;
 }
 
@@ -17,7 +18,7 @@ html {
   --text: calc(2.5rem + 1vw);
   --big: calc(2.4rem + 1vw);
   --special-color: #906272;
-  --background-color: #414141;
+  --background-color: #000;
   --grey-text: #525252;
 }
 
@@ -80,14 +81,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px 12px;
+  padding: 20px 0px 2px;
   background: #fff;
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  flex: 1 1 20rem;
+  flex: 1 1 30rem;
 }
 
 #logo {
@@ -144,7 +145,6 @@ nav {
   justify-content: space-around;
   flex: 1 1 20rem;
   text-align: center;
-
   transform: translateY(-100%);
 }
 
@@ -328,88 +328,6 @@ nav {
   width: 100%;
 }
 
-@media screen and (max-width: 842px) {
-  .hero {
-    width: 100%;
-  }
-  .hero-introduction p {
-    padding: 5rem 3rem;
-  }
-  /* Burger Menu */
-  .burger {
-    position: relative;
-    display: block;
-    cursor: pointer;
-  }
-  .burger span {
-    padding: 0.2rem 2rem;
-    background: var(--gray-text);
-    margin: 0.5rem 0rem;
-    display: block;
-    transition: all 0.5s ease;
-  }
-  .nav-links a {
-    color: white;
-    font-size: var(--header3);
-    text-decoration: underline;
-  }
-  .nav-links {
-    background: var(--background-color);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 1s ease;
-  }
-
-  .nav-open {
-    transform: translateX(-100%);
-  }
-
-  .toggle .line1 {
-    transform: rotateZ(45deg) translateY(300%);
-    background: white;
-  }
-  .toggle .line2 {
-    opacity: 0;
-  }
-  .toggle .line3 {
-    transform: rotateZ(-45deg) translateY(-300%);
-    background: white;
-  }
-
-  /*About section */
-  .about-text div {
-    padding: 3rem 3rem;
-  }
-  /* GALLERY*/
-  .gallery img {
-    grid-row: auto;
-    grid-column: auto;
-  }
-  .gallery {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  }
-  .gallery-head {
-    opacity: 0.8;
-  }
-
-  .my-work {
-    flex-direction: column;
-  }
-  .story-description,
-  .work-description {
-    width: 100%;
-  }
-  .work-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
 /* Carousel */
 
 .carousel-wrapper {
@@ -508,7 +426,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 90%;
-
+  margin: auto;
   padding: 40px 0px;
 }
 
@@ -524,6 +442,70 @@ nav {
   width: 100%;
 }
 
+/* Contatct */
+.contact {
+  min-height: 90vh;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.form-wrapper {
+  flex: 3 1 40rem;
+}
+
+.form-wrapper label {
+  display: block;
+}
+
+.form-wrapper input {
+  display: block;
+  margin: 3rem 0rem;
+  border: #000 solid 3px;
+  padding: 1rem;
+  background: #fff;
+  text-decoration: none;
+}
+
+.form-wrapper textarea {
+  display: block;
+  margin: 3rem 0rem;
+  border: #000 solid 3px;
+  padding: 1rem;
+  background: #fff;
+  text-decoration: none;
+}
+
+.form-wrapper button {
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  background: #fff;
+}
+
+.contact img {
+  flex: 1 1 40rem;
+}
+
+/* Footer */
+
+footer {
+  background: #000;
+  display: flex;
+  padding: 3rem 5%;
+  align-items: center;
+  color: #fff;
+}
+
+footer ul {
+  display: flex;
+  flex: 1rem;
+  text-decoration: none;
+}
+
+footer h4 {
+  flex: 1 1 40rem;
+}
+
 @media screen and (max-width: 842px) {
   .hero {
     width: 100%;
@@ -531,7 +513,7 @@ nav {
   .hero-introduction p {
     padding: 5rem 3rem;
   }
-  /* Burger Menu */
+
   .burger {
     position: relative;
     display: block;
@@ -603,8 +585,5 @@ nav {
   .work-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  .nav-open {
-    flex-direction: column;
   }
 }
